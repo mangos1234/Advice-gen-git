@@ -1,0 +1,64 @@
+$bodyColour: hsl(218, 23%, 16%);
+$adviceContainerColour: hsl(217, 19%, 24%);
+$green: hsl(150, 100%, 66%);
+$paraColour: hsl(193, 38%, 86%);
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Manrope", Arial;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-color: $bodyColour;
+    width: 100vw;
+    height: 100vh;
+}
+
+.adviceContainer{
+    max-width: 500px;
+    background-color: $adviceContainerColour;
+    margin: 5%;
+    padding: 5% 5% 10% 5%;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+
+    @extend .flex;
+    flex-direction: column; 
+
+    h1{
+        color: $green;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        padding: 5%;
+    }
+
+    p{
+        font-size: 28px;
+        color: $paraColour;
+        padding: 5%;
+    }
+
+    img{
+        padding: 5%;
+        width: 100%;
+    }
+
+    .diceHolder{
+        background-color: $green;
+        padding: 5%;
+        border-radius: 100%;
+        position: absolute;
+        bottom: -35px;
+    }
+}
